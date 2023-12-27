@@ -2,6 +2,10 @@ version: '3'
 
 services:
   web:
+    image: saifclouddevops/msdjango
+    restart: always
+    ports:
+      - "8000:8000"
   postgres:
     image: postgres:latest
     container_name: my_postgres
