@@ -1,0 +1,28 @@
+loggin user webuser and the time of login 2023-02-14 06:12:51.892206+00:00 
+
+webuser user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-14 06:15:03.822804 
+
+loggin user webuser and the time of login 2023-02-14 06:56:42.619095+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-14 06:56:42.619095+00:00 
+
+loggin user webuser and the time of login 2023-02-14 06:56:42.619095+00:00 
+
+webuser user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-14 06:59:14.825874 
+
+loggin user webuser and the time of login 2023-02-14 06:59:32.505793+00:00 
+
+webuser user clicked this site None 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-14 06:59:32.505793+00:00 
+
+logging out user and the time of logout the session is 2023-02-14 07:01:29.268271 
+

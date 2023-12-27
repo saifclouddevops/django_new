@@ -1,0 +1,52 @@
+loggin user user and the time of login 2023-02-01 06:30:26.303616+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:30:30.180159 
+
+loggin user user and the time of login 2023-02-01 06:30:33.488834+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:30:50.022895 
+
+loggin user user and the time of login 2023-02-01 06:30:54.453836+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:30:59.577443 
+
+loggin user user and the time of login 2023-02-01 06:31:03.890505+00:00 
+
+user user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+logging out user and the time of logout the session is 2023-02-01 06:31:41.303089 
+
+loggin user user and the time of login 2023-02-01 06:31:54.639707+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:32:04.786800 
+
+loggin user anusiya and the time of login 2023-02-01 06:32:17.105492+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:32:21.582393 
+
+loggin user anusiya and the time of login 2023-02-01 06:32:49.916416+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:32:52.900893 
+
+logging out user and the time of logout the session is 2023-02-01 06:33:24.613174 
+
+loggin user anusiya and the time of login 2023-02-01 06:33:56.353194+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:33:59.398330 
+
+loggin user user and the time of login 2023-02-01 06:34:03.272578+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:34:18.912424 
+
+loggin user user and the time of login 2023-02-01 06:34:30.388990+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:34:47.266094 
+
+loggin user user and the time of login 2023-02-01 06:35:05.592221+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:35:11.892582 
+
+loggin user user and the time of login 2023-02-01 06:37:21.009880+00:00 
+
+logging out user and the time of logout the session is 2023-02-01 06:37:24.507649 
+

@@ -1,0 +1,29 @@
+stages:     
+
+  - docker image build
+  - docker image upload
+  - deploy into production
+
+
+image build job:   
+  stage: docker image build
+  tags:
+    - docker
+  script:
+    - cd /home/django/
+    - docker build --no-cache -t git.ajax.tech:5000/praveenkumarn/django_central .
+image push job:   
+  stage: docker image upload
+  tags:
+    - docker  
+  script:
+    - docker push git.ajax.tech:5000/praveenkumarn/django_central
+deploy to production job:   
+  stage: deploy into production
+  tags:
+    - kubernetes  
+  script:
+    - cd /home/gitlab-runner/Centeralnew-django
+    - export KUBECONFIG=~/.kube/config
+    - kubectl delete -f django.yaml
+    - kubectl apply -f django.yaml

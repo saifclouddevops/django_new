@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>AMT - Edit Application</title> 
+{% endblock %}
+
+
+{% block content %}
+<div class="col-12 mb-3">
+    <h4 class="d-inline-block">Update {{ applications.name | title }} <i class="bi bi-pencil-square"></i></h4>
+    <a href="/app_config" target="_self" class="btn btn-danger mt-0 d-inline-block float-end">Cancel<i class="bi bi-x text-white"></i></a>
+</div>
+<!-- <div class="col-12 mb-3" >
+   
+</div> -->
+<section class="section">
+    <div class="row">
+        <!-- <h5 class="mt-2">Add Members</h5>
+        <hr class="mt-0 mb-2"> -->
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">App Details:</h5>
+                    <form method="post" enctype="multipart/form-data" action="/update/{{applications.id}}">
+                        {% csrf_token %}
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">APP Name:</label>  
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="name" value="{{ applications.name }}">
+                            </div>  
+                        </div> 
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">APP Based On:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="based_on" id="id_based_on">
+                                  {%for mykey, myvalue in app_choices %}
+                                    <option value="{{mykey}}" {% if mykey == applications.based_on %} selected {% endif %}>{{myvalue}}</option>
+                                  {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">APP Belongs to:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="app_belongs" id="id_app_belongs">
+                                  {%for mykey,myvalue in app_belongs %}
+                                    <option value="{{mykey}}" {% if mykey == applications.app_belongs %} selected {% endif %}>{{myvalue}}</option>
+                                  {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">  
+                            <label for="name" class="col-sm-2 col-form-label">Domain:</label> 
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="domain" name="domain" value="{{ applications.domain }}"> 
+                            </div>  
+                        </div>  
+
+                        <div class="row mb-3">  
+                            <label for="server" class="col-sm-2 col-form-label">Server:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="server" name="server" value="{{ applications.server }}">
+                            </div>
+                        </div> 
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">Server Status:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="server_status_on" id="id_server_status_on">
+                                  {%for mykey,myvalue in server_status %}
+                                    <option value="{{mykey}}" {% if mykey == applications.server_status_on %} selected {% endif %}>{{myvalue}}</option>
+                                  {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">Server Selection:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="server_selection" id="id_server_selection">
+                                  {%for mykey,myvalue in server_selections %}
+                                    <option value="{{mykey}}" {% if mykey == applications.server_selection %} selected {% endif %}>{{myvalue}}</option>
+                                  {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">  
+                            <label for="description" class="col-sm-2 col-form-label">Description:</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="description" name="description">{{ applications.description }}</textarea>
+                            </div>
+                        </div> 
+
+                        <div class="row mb-3">  
+                            <label for="authentication_url" class="col-sm-2 col-form-label">Authentication Url:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="authentication_url" name="authentication_url" value="{{ applications.authentication_url }}">
+                            </div>
+                        </div> 
+
+                        <div class="row mb-3">  
+                            <label for="logo_img" class="col-sm-2 col-form-label">Upload logo:</label>
+                            <div class="col-sm-10">
+                              <img src ="{{ MEDIA_URL }}{{applications.logo_img }}" width="70px"/>
+                              <input type="file" class="form-control mt-2" id="logo_img" name="logo_img">
+                            </div>
+                        </div> 
+                        
+                        <button type="submit" class="btn btn-success" id="save" data-target="">Save Member</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Showing accessed user by this Application -->
+<section class="section">
+    <div class="row">
+      <div class="col-lg-10">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ applications.name }} Accessed By:</h5>
+
+            <!-- Table with stripped rows -->
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">S no.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Designation</th>
+                  <th scope="col">Keycloak Access</th>
+                  <th scope="col">Google Access</th>
+                  <th scope="col">Block User</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for userVal in get_usr_list %}
+                <tr>
+                  <td scope="row">{{forloop.counter}}</td>
+                  <td>{{userVal.username}}</td>
+                  <td></td>
+                  <td><input type="checkbox" name="keycloak_chk" id="keycloak_chk" disabled="disabled" {% if "keycloak" in userVal.provider %} checked {% else %} {% endif %}></td>
+                  <td><input type="checkbox" name="google_chk" id="google_chk" disabled="disabled" {% if "google" in userVal.provider %} checked {% else %} {% endif %}></td>
+                  <td><input type="checkbox" name="block_user_chk" id="block_user_chk" disabled="disabled" {% if userVal.is_active == False %} checked {% else %} {% endif %}></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<script type="text/javascript">
+   
+</script>
+{% endblock %}

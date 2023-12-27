@@ -1,0 +1,6 @@
+!.gitignore
+*.pyc
+addapp/__pycache__/
+loginapps/settings.py
+log/app.log
+

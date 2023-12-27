@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>AMT - User Profile</title> 
+{% endblock %}
+
+{% block content %}
+<div class="col-12 mb-3">
+  {% if user.is_authenticated %}
+    <h4 class="d-inline-block">{{ user.get_username }} Profile <i class="bi bi-person"></i></h4>
+  {% endif %}
+  <a href="{% url 'list' %}" target="_self" class="btn btn-danger mt-0 d-inline-block float-end">Cancel<i class="bi bi-x text-white"></i></a>
+</div>
+
+<section class="section profile">
+    <div class="row">
+        <div class="col-xl-10">
+            <div class="card">
+                <div class="card-body pt-3">
+                    <h5 class="card-title">Create Profile:</h5>
+
+                    <!-- Profile Edit Form -->
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row mb-3">
+                            <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                            <div class="col-md-8 col-lg-9">
+                            <img src="" alt="Profile" id="profile_pic">
+                            <div class="image-upload">
+                                <label for="profile_img">
+                                    <i class="btn btn-primary btn-sm bi bi-upload"></i>
+                                </label>
+                                <input id="profile_img" type="file" name="profile_img"/>
+                                
+                                <i class="btn btn-danger btn-sm bi bi-trash profile_img_del_btn"></i>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="user" class="col-md-4 col-lg-3 col-form-label">User ID</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="user" type="text" class="form-control" id="user" value="{{ user.id }}" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="first_name" class="col-md-4 col-lg-3 col-form-label">First Name</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="first_name" type="text" class="form-control" id="first_name" value="{{ user.first_name }}" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="last_name" class="col-md-4 col-lg-3 col-form-label">Last Name</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="last_name" type="text" class="form-control" id="last_name" value="{{ user.last_name }}" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="email" type="email" class="form-control" id="email" value="{{ user.email }}" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
+                            <div class="col-md-8 col-lg-9">
+                            <textarea name="description" class="form-control" id="description" style="height: 100px"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="company" type="text" class="form-control" id="company">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="job" type="text" class="form-control" id="job">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="country" type="text" class="form-control" id="country">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="address" type="text" class="form-control" id="address">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="phone" type="text" class="form-control" id="phone">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="twitter" type="text" class="form-control" id="twitter">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="facebook" type="text" class="form-control" id="facebook">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="instagram" type="text" class="form-control" id="instagram">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
+                            <div class="col-md-8 col-lg-9">
+                            <input name="linkedin" type="text" class="form-control" id="linkedin">
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form><!-- End Profile Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    document.getElementById('profile_pic').style.display = 'none';
+    $('#header_profile_pic').hide();
+    $("#riuser2").show();
+    $("#profile_img").change(function () {
+        var file=$(this).val().replace(/C:\\fakepath\\/ig,'');
+        document.getElementById('profile_pic').style.display = 'block';
+        document.getElementById('profile_pic').src = window.URL.createObjectURL(this.files[0])
+    });
+
+    $('.profile_img_del_btn').click(function(e){
+        $("#profile_img").val('');
+        document.getElementById('profile_pic').style.display = 'none';  
+    });
+</script>
+{% endblock %}

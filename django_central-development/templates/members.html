@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>AMT - Add Application</title> 
+{% endblock %}
+
+{% block content %}
+<div class="col-12 mb-3">
+    <h4 class="d-inline-block">Add Application <i class="bx bx-book-add"></i></h4>
+    <a href="/app_config" target="_self" class="btn btn-danger mt-0 d-inline-block float-end">Cancel<i class="bi bi-x text-white"></i></a>
+</div>
+<section class="section">
+    <div class="row">
+        <!-- <h5 class="mt-2">Add Members</h5>
+        <hr class="mt-0 mb-2"> -->
+        <div class="col-lg-10">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">App Details:</h5>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">APP Name:</label>  
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>  
+                        </div> 
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">APP Based On:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="based_on" id="id_based_on">
+                                    {%for mykey,myvalue in app_choices %}
+                                        <option value="{{mykey}}">{{myvalue}}</option>
+                                    {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">APP Belongs to:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="app_belongs" id="id_app_belongs">
+                                    {%for mykey,myvalue in app_belongs %}
+                                        <option value="{{mykey}}">{{myvalue}}</option>
+                                    {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">  
+                            <label for="name" class="col-sm-2 col-form-label">Domain:</label> 
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="domain" name="domain"> 
+                            </div>  
+                        </div>  
+
+                        <div class="row mb-3">  
+                            <label for="server" class="col-sm-2 col-form-label">Server:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="server" name="server">
+                            </div>
+                        </div> 
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">Server Status:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="server_status_on" id="id_server_status_on">
+                                    {%for mykey,myvalue in server_status %}
+                                        <option value="{{mykey}}">{{myvalue}}</option>
+                                    {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">   
+                            <label for="name" class="col-sm-2 col-form-label">Server Selection:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-select" name="server_selection" id="id_server_selection">
+                                    {%for mykey,myvalue in server_selections %}
+                                        <option value="{{mykey}}">{{myvalue}}</option>
+                                    {%endfor%}
+                                </select>
+                            </div> 
+                        </div>
+
+                        <div class="row mb-3">  
+                            <label for="description" class="col-sm-2 col-form-label">Description:</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="description" name="description"></textarea>
+                            </div>
+                        </div> 
+
+                        <div class="row mb-3">  
+                            <label for="authentication_url" class="col-sm-2 col-form-label">Authentication Url:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="authentication_url" name="authentication_url">
+                            </div>
+                        </div> 
+
+                        <div class="row mb-3">  
+                            <label for="logo_img" class="col-sm-2 col-form-label">Upload logo:</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control" id="logo_img" name="logo_img">
+                            </div>
+                        </div> 
+                        
+                        <button type="submit" class="btn btn-success" id="save" data-target="">Save Member</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    // $('#save').click(function(){
+    // var urlsVal;
+    // urlsVal = $("#authentication_url").val();
+    // $('#save').on('submit', function(e) {
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: $(this).attr('action'),
+    //         dataType: 'json',
+    //         success: function(json) {
+    //             $("#forms_app").attr('action', urlsVal)
+    //         }
+    //     });
+    // });
+</script>
+{% endblock %}

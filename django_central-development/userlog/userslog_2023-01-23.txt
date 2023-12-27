@@ -1,0 +1,18 @@
+loggin user admin and the time of login 2023-01-23 08:22:30.701348+00:00 
+
+admin user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+logging out user admin and the time of logout the session is 2023-01-23 08:23:18.198893 
+
+loggin user admin and the time of login 2023-01-23 08:27:12.373966+00:00 
+
+loggin user admin and the time of login 2023-01-23 09:22:48.077989+00:00 
+
+logging out user admin and the time of logout the session is 2023-01-23 09:22:50.665169 
+
+loggin user admin and the time of login 2023-01-23 09:23:02.916049+00:00 
+
+admin user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+logging out user admin and the time of logout the session is 2023-01-23 09:23:18.460678 
+

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>AMT - SSO</title> 
+{% endblock %}
+
+{% block breadcrum %}
+{% endblock %}
+
+{% block content %}
+<!-- <stage>clear</stage> -->
+<section class="section app_page_section">
+  <div class="row align-items-top">
+    {% for belong in belongs %}
+   <div class="col-lg-4 col-sm-12">
+    <div class="card {{belong}}">
+     <div class="card-body">
+        <div class="row1">
+         <h5 class="card-title">{{belong}}</h5>
+         {% if belong == "VV MARINE" %}
+         <img src="{% static 'img/VV-Marine.png' %}" alt="logo_img marine_logo" class="logo_img marine_logo" />
+         {% elif belong == "VV PAIINT" %}
+         <img src="{% static 'img/Logo.png' %}" alt="logo_img paint_logo" class="logo_img paint_logo" />
+         {% elif belong == "MCS SL" %}
+         <img src="{% static 'img/MCS-Logo_01_PNG_c@2x.png' %}" alt="logo_img mcs_logo" class="logo_img mcs_logo" />
+         {% elif belong == "DS SUGARS" %}
+         <img src="{% static 'img/Logo_bb.png' %}" alt="dssugar_logo" class="logo_img dssugar_logo" />
+         {% elif belong == "MCS" %}
+         <img src="{% static 'img/MCS-Logo_01_PNG_c@2x.png' %}" alt="logo_img mcs_logo" class="logo_img mcs_logo" />
+         {% elif belong == "AMT" %}
+         <img src="{% static 'img/Ajax_Logo.png' %}" alt="amt_logo" class="logo_img amt_logo" />
+         {% endif %}
+        </div>
+        <div class="row2">
+        </div>
+        <div class="row3">          
+          {% for member in Members %}
+            {% if belong == member.app_belongs %}              
+            {% for link in linknames %}
+            {% for key,value in link.items %}            
+            {% if key == member.name %}
+              <a href="{{ member.authentication_url }}" target="_blank" class="btn {{member.server_status_on}} btn-outline-primary {{member.name}}">{{value}}</a> 
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+     </div>
+    </div>
+   </div>
+   {% endfor %}
+  </div>
+</section>
+
+<script type="text/javascript">
+$(function(){
+    var authentication_url = $("#urlval").val();   
+    $(".btn-signin-url").on('click', function(e){
+      var siteurl = $(this).find('a').attr('href');
+      $.ajax({
+      type: "POST",
+      url: "/geturl/",
+      data: {"siteurl": siteurl, csrfmiddlewaretoken: '{{ csrf_token }}'},
+      cache: false,
+      success: function(data){
+        console.log("Site url stored in session which is clicked by login user.")
+      }
+    });
+  });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,190 @@
+loggin user user and the time of login 2023-02-03 05:07:48.156506+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:07:50.829543 
+
+loggin user user and the time of login 2023-02-03 05:07:57.142329+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:07:59.935072 
+
+loggin user user and the time of login 2023-02-03 05:08:06.412308+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:08:08.372575 
+
+loggin user anusiya and the time of login 2023-02-03 05:21:06.185432+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:21:08.391025 
+
+loggin user user and the time of login 2023-02-03 05:21:12.437831+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:21:14.825400 
+
+loggin user user and the time of login 2023-02-03 05:37:44.636400+00:00 
+
+user user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+logging out user and the time of logout the session is 2023-02-03 05:39:13.132205 
+
+logging out user and the time of logout the session is 2023-02-03 05:39:13.190408 
+
+loggin user user and the time of login 2023-02-03 05:52:09.895218+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:52:13.437825 
+
+logging out user and the time of logout the session is 2023-02-03 05:52:13.478009 
+
+logging out user and the time of logout the session is 2023-02-03 05:52:17.376439 
+
+loggin user user and the time of login 2023-02-03 05:52:30.310442+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:52:32.813544 
+
+logging out user and the time of logout the session is 2023-02-03 05:52:33.047340 
+
+loggin user user and the time of login 2023-02-03 05:53:59.605027+00:00 
+
+user user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+logging out user and the time of logout the session is 2023-02-03 05:55:10.538294 
+
+loggin user user and the time of login 2023-02-03 05:55:24.239905+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:55:38.802427 
+
+loggin user user and the time of login 2023-02-03 05:58:48.287207+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 05:58:50.696805 
+
+loggin user user and the time of login 2023-02-03 06:10:07.102368+00:00 
+
+user user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+loggin user user and the time of login 2023-02-03 06:18:08.658632+00:00 
+
+user user clicked this site https://sso.ajax.tech/auth/realms/sugarserp/protocol/openid-connect/auth?nonce=false?scope=user_id&state=%7B%22p%22%3A+6%2C+%22r%22%3A+%22https%253A%252F%252Ferp.vvsugars.com%252Fweb%22%2C+%22d%22%3A+%22odoo1010_VVSLIVE%22%7D&redirect_uri=https%3A%2F%2Ferp.vvsugars.com%2Fauth_oauth%2Fsignin&response_type=token&client_id=centrallivesugars 
+
+loggin user admin and the time of login 2023-02-03 06:28:32.829172+00:00 
+
+loggin user admin and the time of login 2023-02-03 06:28:32.829172+00:00 
+
+admin user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 06:35:08.632230 
+
+loggin user user and the time of login 2023-02-03 06:38:16.440287+00:00 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 06:38:55.929875 
+
+loggin user user and the time of login 2023-02-03 07:35:40.371539+00:00 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 07:45:56.404775 
+
+loggin user user and the time of login 2023-02-03 07:47:48.664849+00:00 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 07:48:29.724667 
+
+loggin user user and the time of login 2023-02-03 07:48:34.846043+00:00 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 07:52:15.699179+00:00 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 08:04:06.921453 
+
+loggin user user and the time of login 2023-02-03 09:01:47.553556+00:00 
+
+user user clicked this site None 
+
+loggin user admin and the time of login 2023-02-03 09:11:39.266384+00:00 
+
+loggin user admin and the time of login 2023-02-03 09:11:39.266384+00:00 
+
+admin user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 09:18:33.040766+00:00 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 09:48:45.484251 
+
+loggin user user and the time of login 2023-02-03 10:08:59.214106+00:00 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 10:08:59.214106+00:00 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 10:08:59.214106+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 10:12:03.588188 
+
+loggin user user and the time of login 2023-02-03 10:12:08.824133+00:00 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 10:12:19.010935 
+
+logging out user and the time of logout the session is 2023-02-03 10:12:19.062362 
+
+loggin user user and the time of login 2023-02-03 10:13:20.863742+00:00 
+
+loggin user user and the time of login 2023-02-03 10:17:28.034632+00:00 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 10:33:51.579706+00:00 
+
+user user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 10:34:18.210340 
+
+loggin user user and the time of login 2023-02-03 10:34:29.041696+00:00 
+
+user user clicked this site None 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 10:34:29.041696+00:00 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 10:47:35.066524+00:00 
+
+user user clicked this site None 
+
+loggin user user and the time of login 2023-02-03 10:54:59.491240+00:00 
+
+user user clicked this site None 
+
+loggin user admin and the time of login 2023-02-03 10:59:37.521442+00:00 
+
+admin user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-03 11:00:04.852114 
+
+loggin user webuser and the time of login 2023-02-03 11:35:04.565472+00:00 
+
+logging out user and the time of logout the session is 2023-02-03 12:25:38.017136 
+

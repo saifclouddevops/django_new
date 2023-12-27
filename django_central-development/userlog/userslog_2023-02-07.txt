@@ -1,0 +1,72 @@
+logging out user and the time of logout the session is 2023-02-07 06:53:13.269473 
+
+loggin user admin and the time of login 2023-02-03 11:05:13.545187+00:00 
+
+logging out user and the time of logout the session is 2023-02-07 06:53:27.936092 
+
+logging out user and the time of logout the session is 2023-02-07 06:53:28.008795 
+
+loggin user webuser and the time of login 2023-02-07 06:54:36.092299+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 07:32:54.700657+00:00 
+
+logging out user and the time of logout the session is 2023-02-07 07:33:05.819874 
+
+loggin user admin and the time of login 2023-02-07 07:33:36.722540+00:00 
+
+loggin user admin and the time of login 2023-02-07 07:46:59.310789+00:00 
+
+logging out user and the time of logout the session is 2023-02-07 08:02:24.707516 
+
+logging out user and the time of logout the session is 2023-02-07 08:02:24.710128 
+
+loggin user webuser and the time of login 2023-02-07 08:07:16.556209+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 08:17:24.808531+00:00 
+
+webuser user clicked this site None 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 09:52:23.906364+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 10:53:01.183108+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 12:42:33.101990+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 12:47:06.438808+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 13:05:14.992099+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 13:08:50.710933+00:00 
+
+logging out user and the time of logout the session is 2023-02-07 13:09:40.827881 
+
+loggin user webuser and the time of login 2023-02-07 13:10:53.824649+00:00 
+
+webuser user clicked this site None 
+
+logging out user and the time of logout the session is 2023-02-07 13:11:33.303374 
+
+logging out user and the time of logout the session is 2023-02-07 13:11:33.350282 
+
+loggin user webuser and the time of login 2023-02-07 13:14:34.144669+00:00 
+
+webuser user clicked this site None 
+
+loggin user webuser and the time of login 2023-02-07 13:19:06.606110+00:00 
+

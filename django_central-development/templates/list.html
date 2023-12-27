@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>AMT - SSO</title> 
+{% endblock %}
+
+{% block breadcrum %}
+{% endblock %}
+
+{% block content %}
+
+<section class="section app_page_section">
+  <div class="row align-items-top">
+    {% for belong in belongs %}
+   <div class="col-lg-4 col-sm-12">
+    <div class="card {{belong}}">
+     <div class="card-body">
+        <div class="row1">
+         <h5 class="card-title">{{belong}}</h5>
+         {% if belong == "VV MARINE" %}
+         <img src="{% static 'img/VV-Marine.png' %}" alt="logo_img marine_logo" class="logo_img marine_logo" />
+         {% elif belong == "VV PAIINT" %}
+         <img src="{% static 'img/Logo.png' %}" alt="logo_img paint_logo" class="logo_img paint_logo" />
+         {% elif belong == "MCS SL" %}
+         <img src="{% static 'img/MCS-Logo_01_PNG_c@2x.png' %}" alt="logo_img mcs_logo" class="logo_img mcs_logo" />
+         {% elif belong == "DS SUGARS" %}
+         <img src="{% static 'img/Logo_bb.png' %}" alt="dssugar_logo" class="logo_img dssugar_logo" />
+         {% elif belong == "MCS" %}
+         <img src="{% static 'img/MCS-Logo_01_PNG_c@2x.png' %}" alt="logo_img mcs_logo" class="logo_img mcs_logo" />
+         {% elif belong == "AMT" %}
+         <img src="{% static 'img/Ajax_Logo.png' %}" alt="amt_logo" class="logo_img amt_logo" />
+         {% endif %}
+        </div>
+        <div class="row2">
+        </div>
+        <div class="row3">          
+          {% for member in Members %}
+            {% if belong == member.app_belongs %}              
+            {% for link in linknames %}
+            {% for key,value in link.items %}            
+            {% if key == member.name %}
+              <a href="{{ member.authentication_url }}" target="_blank" class="btn {{member.server_status_on}} btn-outline-primary {{member.name}}">{{value}}</a> 
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+     </div>
+    </div>
+   </div>
+   {% endfor %}
+  </div>
+</section>
+
+
+
+<!-- FILL AFTER Fetch-->
+
+
+
+
+
+<!-- <div id="iframeHolder"> -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">AMT APPS</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="iframeHolder_body">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- </div> -->
+
+<script type="text/javascript">
+$(function(){
+    var authentication_url = $("#urlval").val();
+    // $("#iframeHolder").hide();
+    // console.log(authentication_url);
+    // $('#signin').click(function(){ 
+    //     // $("#iframeHolder").show();
+    //     if(!$('#iframe').length) {
+    //         $('#iframeHolder_body').html('<iframe id="iframe" src="https://central.ajax.tech/" width="100%" height="80%" referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"></iframe>');
+    //     }
+    // });   
+    $(".btn-signin-url").on('click', function(e){
+      var siteurl = $(this).find('a').attr('href');
+      $.ajax({
+      type: "POST",
+      url: "/geturl/",
+      data: {"siteurl": siteurl, csrfmiddlewaretoken: '{{ csrf_token }}'},
+      cache: false,
+      success: function(data){
+        console.log("Site url stored in session which is clicked by login user.")
+      }
+    });
+
+    // var urlvals = $(this).parent('.card__btn').siblings(".card__content").find("input").val();
+    // alert(urlvals);
+    // $("#iframeHolder").show();
+    // if(!$('#iframe').length) {
+    //     $('#iframeHolder_body').html('<iframe id="iframe" src="'+urlvals+'" width="100%" height="80%" referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"></iframe>');
+    // }
+  });
+});
+
+$(document).ready(function(){
+  // alert( $(location).attr('pathname'));
+  // for search
+  // $('#query').keyup(function(e) {
+  //   var innersec = '';
+  //   if($(this).val().length >= 3) {
+  //     $.ajax({
+  //         url:"/search/",
+  //         type:"POST",
+  //         data: { csrfmiddlewaretoken: '{{ csrf_token }}', search: $(this).val()},
+  //         success: function (data) {
+  //           innersec +=  '';
+  //         },
+  //         error: function(data) {
+  //             alert("something's wrong");
+  //         }
+  //     });
+  //   }
+  // });
+});
+</script>
+{% endblock %}
